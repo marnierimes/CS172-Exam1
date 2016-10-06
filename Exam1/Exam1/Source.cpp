@@ -5,4 +5,13 @@
 //
 
 #include<iostream>
+#include"Movie.h"
+#include"Theater.h"
+
 using namespace std;
+
+int main()
+{
+
+
+}
