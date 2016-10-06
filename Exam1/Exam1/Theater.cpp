@@ -1,28 +1,29 @@
 #include"Theater.h"
+#include"Movie.h"
 
 
-Theater(string Name, String Phone)
+Theater::Theater(string Name, string Phone)
 {
 
 }
-void AddMovie(Movie& Movie)
+void Theater::AddMovie(Movie& Movie)
 {
 
 }
-string GetMovieForHour(int Hour) 
+string Theater::GetMovieForHour(int Hour) 
 {
 
 }
 
-int GetShowTimeForGenre(string Genre)
+int Theater::GetShowTimeForGenre(string Genre)
 {
 
 }
-int GetPopcornPrice()
+int Theater::GetPopcornPrice()
 {
-
+	return popcornPrice;
 }
-int GetCokePrice() 
+int Theater::GetCokePrice() 
 {
-
+	return cokePrice;
 }

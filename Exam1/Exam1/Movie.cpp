@@ -1,7 +1,4 @@
-
 #include"Movie.h"
-#include<iostream>
-
 
 Movie::Movie()
 {
@@ -11,18 +8,20 @@ Movie::Movie()
 
 Movie::Movie(string Title, string Genre, int ShowTime)
 {
-
+	Genre = "Comedy";
+	Title = "High School Musical";
+	ShowTime = 16;
 }
 
-string GetTitle()
+string Movie::GetTitle()
 {
-
+	return title;
 }
-string GetGenre()
+string Movie::GetGenre()
 {
-
+	return genre;
 }
-int GetShowTime()
+int Movie::GetShowTime()
 {
 
 }
