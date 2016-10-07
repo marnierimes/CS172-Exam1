@@ -28,11 +28,11 @@ Movie::Movie(string Title, string Genre, int ShowTime)
 	}
 }
 
-string Movie::GetTitle() const
+string Movie::GetTitle()
 {
 	return title;
 }
-string Movie::GetGenre() const
+string Movie::GetGenre()
 {
 	return genre;
 }

@@ -5,8 +5,8 @@ using namespace std;
 class Movie 
 {
 private:
-	string title;
-	string genre;
+	static string title;
+	static string genre;
 	static int showTime;
 public:
 	//non arg constructor
@@ -14,9 +14,9 @@ public:
 	//creates dice with default title, genre, and show time
 	Movie(string Title, string Genre, int ShowTime);
 	//returns movie title
-	string GetTitle() const;
+	static string GetTitle();
 	//returns genre
-	string GetGenre() const;
+	static string GetGenre();
 	//returns show time
 	static int GetShowTime();
 };

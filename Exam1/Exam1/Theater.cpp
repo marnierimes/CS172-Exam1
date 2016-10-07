@@ -5,7 +5,9 @@
 
 Theater::Theater(string Name, string Phone)
 {
-	showTime = 0;
+	//default popcorn and coke price
+	genre = Movie::GetGenre();
+	showTime = Movie::GetShowTime();
 	popcornPrice = 5;
 	cokePrice = 3;
 }
@@ -13,27 +15,28 @@ void Theater::AddMovie(Movie& Movie)
 {
 	
 }
-string Theater::GetMovieForHour(int Hour) 
+string Theater::GetMovieForHour(int Hour) const
 {
-	
-	if (Hour == showTime);
+	//checks if hour matches a show time
+	if (Hour == showTime)
 	{
-		Movie::GetShowTime();
-		Movie::GetTitle();
-		return title;
+		//returns movie title
+		return Movie::GetTitle();
+		
 	}
-	else
+	//returns " " if the hour doesn't match a show title
 		return " ";
 }
 
 int Theater::GetShowTimeForGenre(string Genre) const
 {
-	if(Genre == " ")
+	//checks if Genre matches a genre
+	if(Genre == genre)
 	{
 		//this returns showtime
 		return showTime;
 	}
-	else return -1;
+	return -1;
 }
 int Theater::GetPopcornPrice() const
 {
