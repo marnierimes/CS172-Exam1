@@ -18,13 +18,13 @@ void Theater::AddMovie(Movie& Movie)
 string Theater::GetMovieForHour(int Hour) const
 {
 	//checks if hour matches a show time
-	if (Hour == showTime)
+	if (Hour > 0 || Hour < 24)
 	{
 		//returns movie title
 		return Movie::GetTitle();
 		
 	}
-	//returns " " if the hour doesn't match a show title
+	//returns " " if no movies are shown at the hour given
 		return " ";
 }
 
@@ -36,6 +36,7 @@ int Theater::GetShowTimeForGenre(string Genre) const
 		//this returns showtime
 		return showTime;
 	}
+	//returns -1 if no movies at the given genre exist
 	return -1;
 }
 int Theater::GetPopcornPrice() const
