@@ -23,5 +23,5 @@ string Movie::GetGenre()
 }
 int Movie::GetShowTime()
 {
-
+	return showTime;
 }
