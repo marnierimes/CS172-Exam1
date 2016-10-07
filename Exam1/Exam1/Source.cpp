@@ -32,6 +32,31 @@ int main()
 		garland.AddMovie(movieListing[m]);
 	}
 	int errors = 0;
-	//finish adding in main code
+	if (garland.GetMovieForHour(-1) != "")
+	{
+		errors++;
+		cout << "error: not handling -1 correctly\n";
+	}
+	if (garland.GetMovieForHour(25) != "")
+	{
+		errors++;
+		cout << "error: not handling 25 correctly\n";
+	}
+	if (garland.GetMovieForHour(19) != "Monte Python's Meaning of Life")
+	{
+		errors++;
+		cout << "error: incorrect movie for 19th hour\n";
+	}
+	if (garland.GetShowTimeForGenre("Comedy") != 0)
+	{
+		errors++;
+		cout << "error: incorrect Comedy\n";
+	}
 
+	if (errors == 0)
+	{
+		cout << "Passed\n";
+	}
+	else
+		cout << "Errors: " << errors << endl;
 }
